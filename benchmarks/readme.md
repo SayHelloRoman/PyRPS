@@ -3,7 +3,7 @@
 python PyRPS.py -url http://127.0.0.1:8000 -time 5
 ```
 
-## http
+## http.js
 
 ```
 node http_server.js
@@ -15,7 +15,7 @@ node http_server.js
 ```
 
 
-## express
+## express.js
 ```
 npm i express
 node express_server.js
@@ -26,7 +26,7 @@ node express_server.js
 1036 RPS in second
 ```
 
-## fastapi
+## fastapi.py
 ```
 pip install fastapi
 pip install uvicorn
@@ -38,7 +38,7 @@ python fastapi_server.py
 620 RPS in second
 ```
 
-## flask
+## flask.py
 ```
 pip install flask
 python flask_server.py
@@ -49,7 +49,7 @@ python flask_server.py
 665 RPS in second
 ```
 
-## aiohttp
+## aiohttp.py
 ```
 pip install aiohttp
 python aiohttp_server.py
@@ -58,4 +58,14 @@ python aiohttp_server.py
 ```
 4956 RPS in 5 seconds
 991 RPS in second
+```
+
+## http.go
+```
+go run http_server.go
+```
+
+```
+5680 RPS in 5 seconds
+1136 RPS in second
 ```
