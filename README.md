@@ -1,2 +1,2 @@
 # PyRPS
- Utility for RPS
+ Utility for testing RPS
