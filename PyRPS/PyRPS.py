@@ -1,27 +1,27 @@
-import argparse
 import asyncio
 import time
 
-from request import request
+import aiohttp
 
-parser = argparse.ArgumentParser()
-parser.add_argument('-time', help='Specify how many seconds will be tested', default=5, type=int)
-parser.add_argument('-url', help='Specify address', type=str)
-args = parser.parse_args()
+from request import request, RPS
+import args
 
 
 async def main():
-    start = time.time() + args.time
-    rps = 0
+    end = time.time() + args.time
+    session = aiohttp.ClientSession()
 
-    while start >= time.time():
-        await request(args.url)
-        rps += 1
+    while end >= time.time():
+        await asyncio.wait([request(args.url, session) for _ in range(40)], timeout=end-time.time())
+        
+    print(
+        f"{RPS.rps} RPS in {args.time} seconds",
+        f"{RPS.rps // args.time} RPS in second",
+        sep="\n"
+    )
 
-    print("\n".join(
-        (f"{rps} RPS in {args.time} seconds",
-         f"{rps // args.time} RPS in second")
-    ))
+    await asyncio.sleep(1)
+    await session.close()
 
 
 if __name__ == "__main__":

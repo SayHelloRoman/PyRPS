@@ -1,5 +1,5 @@
-const http_server = require("benchmarks/http_server");
+var http = require('http');
  
-http_server.createServer(function(request, response){
+http.createServer(function(request, response){
     response.end("200");
 }).listen(8000);

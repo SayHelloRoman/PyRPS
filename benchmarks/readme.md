@@ -10,8 +10,8 @@ node http_server.js
 ```
 
 ```
-5539 RPS in 5 seconds
-1107 RPS in second
+13040 RPS in 5 seconds
+2608 RPS in second
 ```
 
 
@@ -22,8 +22,8 @@ node express_server.js
 ```
 
 ```
-5182 RPS in 5 seconds
-1036 RPS in second
+13720 RPS in 5 seconds
+2744 RPS in second
 ```
 
 ## fastapi.py
@@ -34,8 +34,8 @@ python fastapi_server.py
 ```
 
 ```
-3102 RPS in 5 seconds
-620 RPS in second
+5387 RPS in 5 seconds
+1077 RPS in second
 ```
 
 ## flask.py
@@ -45,8 +45,8 @@ python flask_server.py
 ```
 
 ```
-3327 RPS in 5 seconds
-665 RPS in second
+4480 RPS in 5 seconds
+896 RPS in second
 ```
 
 ## aiohttp.py
@@ -56,8 +56,8 @@ python aiohttp_server.py
 ```
 
 ```
-4956 RPS in 5 seconds
-991 RPS in second
+11119 RPS in 5 seconds
+2223 RPS in second
 ```
 
 ## http.go
@@ -66,6 +66,6 @@ go run http_server.go
 ```
 
 ```
-5680 RPS in 5 seconds
-1136 RPS in second
+13640 RPS in 5 seconds
+2728 RPS in second
 ```
