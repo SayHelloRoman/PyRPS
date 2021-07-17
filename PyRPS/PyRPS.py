@@ -12,11 +12,12 @@ async def main():
     session = aiohttp.ClientSession()
 
     while end >= time.time():
-        await asyncio.wait([request(args.url, session) for _ in range(40)], timeout=end-time.time())
+        await asyncio.wait([request(args.url, session) for _ in range(args.coroutines)], timeout=end-time.time())
         
     print(
-        f"{RPS.rps} RPS in {args.time} seconds",
-        f"{RPS.rps // args.time} RPS in second",
+        "RESULT",
+        f"Total requests  : {RPS.rps}",
+        f"RPS             : {RPS.rps // args.time}",
         sep="\n"
     )
 

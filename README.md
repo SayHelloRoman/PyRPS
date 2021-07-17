@@ -11,6 +11,7 @@
 
 - `-time` How many seconds will be tested. Default is 5 seconds.
 - `-url` URL to be tested.
+- `--coroutines` Number of coroutines. Default is 50 coroutines.
 
 ## Benchmarks
 
