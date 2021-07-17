@@ -69,3 +69,14 @@ go run http_server.go
 13640 RPS in 5 seconds
 2728 RPS in second
 ```
+
+## Socket.java
+```
+javac SocketServer.java
+java SocketServer
+```
+
+```
+5560 RPS in 5 seconds
+1112 RPS in second
+```
