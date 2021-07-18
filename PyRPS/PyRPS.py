@@ -4,6 +4,7 @@ import time
 import aiohttp
 
 from request import request, RPS
+from url import URL
 import args
 
 
@@ -26,5 +27,15 @@ async def main():
 
 
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    if args.time * args.coroutines <= 0:
+        print("Invalid arguments!")
+    
+    elif not URL.correctness(args.url):
+        print("Invalid URL")
+    
+    elif not URL.working_capacity(args.url):
+        print("URL doesn't work")
+    
+    else:
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(main())
